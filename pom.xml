@@ -16,7 +16,6 @@
 	</properties>
 
 	<build>
-		<directory>public</directory>
 		<plugins>
 			<plugin>
 				<groupId>org.asciidoctor</groupId>

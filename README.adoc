@@ -1,0 +1,46 @@
+= asciidoctor-demo
+
+Demonstrates a problem with the combination of asciidoctorj-diagram and asciidoctorj-pdf.
+
+== Steps to reproduce
+
+1. Clone this repository
+1. Run `mvn package`
+
+The build renders the document twice, first as HTML and then as PDF.
+
+== The problem
+
+Here's how the `target` directory looks afterwards:
+
+[code]
+----
+$ pwd
+/home/hho/asciidoctor-demo
+
+$ tree -a target
+target
+├ .asciidoctor
+│   └ diagram
+│       └ demo.svg.cache
+├ asciidoctor-demo-0.1.pdf
+├ home
+│   └ hho
+│       └ asciidoctor-demo
+│           └ target
+│               └ .asciidoctor
+│                   └ diagram
+│                       └ demo.svg.cache
+├ images
+│   ├ demo.svg
+│   └ logo.png
+└ index.html
+
+9 directories, 6 files
+----
+
+The `demo.svg.cache` gets created twice, and the second time (from the PDF generation) it includes the entire path to
+my project.
+
+(I don't really know where to open an issue for it - I think it's asciidoctor-diagram creating the cache file, but the
+problem only happens when generating a PDF with asciidoctor-pdf)
