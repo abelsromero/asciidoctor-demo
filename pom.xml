@@ -10,9 +10,9 @@
 	<properties>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<asciidoctorj.version>1.5.6</asciidoctorj.version>
+		<asciidoctorj.version>1.5.8.1</asciidoctorj.version>
 		<asciidoctorj-pdf.version>1.5.0-alpha.16</asciidoctorj-pdf.version>
-		<asciidoctorj-diagram.version>1.5.8</asciidoctorj-diagram.version>
+		<asciidoctorj-diagram.version>1.5.11</asciidoctorj-diagram.version>
 		<jruby.version>9.1.17.0</jruby.version>
 	</properties>
 
@@ -70,7 +70,7 @@
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>${asciidoctorj.version}</version>
+				<version>1.5.7</version>
 				<dependencies>
 					<dependency>
 						<groupId>org.jruby</groupId>
