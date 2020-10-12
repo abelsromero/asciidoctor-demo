@@ -10,9 +10,10 @@
 	<properties>
 		<maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<asciidoctorj.version>1.5.6</asciidoctorj.version>
-		<asciidoctorj-pdf.version>1.5.0-alpha.16</asciidoctorj-pdf.version>
-		<asciidoctorj-diagram.version>1.5.8</asciidoctorj-diagram.version>
+		<asciidoctor-maven.version>2.1.0</asciidoctor-maven.version>
+		<asciidoctorj.version>2.4.1</asciidoctorj.version>
+		<asciidoctorj-pdf.version>1.5.3</asciidoctorj-pdf.version>
+		<asciidoctorj-diagram.version>2.0.5</asciidoctorj-diagram.version>
 	</properties>
 
 	<build>
@@ -20,7 +21,7 @@
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
 				<artifactId>asciidoctor-maven-plugin</artifactId>
-				<version>${asciidoctorj.version}</version>
+				<version>${asciidoctor-maven.version}</version>
 				<dependencies>
 					<dependency>
 						<groupId>org.asciidoctor</groupId>
